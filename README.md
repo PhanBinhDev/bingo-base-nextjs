@@ -1,49 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with
-[`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bingo Template Nextjs 15
 
-## Getting Started
+## Giới thiệu
 
-First, run the development server:
+Bingo Template là một template Next.js 15 được thiết lập sẵn với các công cụ hỗ trợ phát triển như ESLint, Prettier, Husky, Commitlint, TailwindCSS và TypeScript.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Cài đặt
+
+1. Clone repository:
+   ```sh
+   git clone https://github.com/PhanBinhDev/bingo-base-nextjs
+   cd app-clone
+   ```
+2. Cài đặt dependencies:
+   ```sh
+   npm install
+   ```
+
+
+## Scripts
+
+- `npm run dev` - Chạy server phát triển
+- `npm run build` - Build production
+- `npm run start` - Chạy production server
+- `npm run lint` - Kiểm tra lint với ESLint
+- `npm run lint:fix` - Fix các lỗi ESLint
+- `npm run type-check` - Kiểm tra lỗi TypeScript
+- `npm run format` - Format code với Prettier
+- `npm run prepare` - Cài đặt Husky
+
+## Cấu hình
+
+### 1. ESLint
+
+ESLint được sử dụng để kiểm tra code theo tiêu chuẩn, cấu hình bao gồm:
+
+- `eslint-config-next`: Hỗ trợ Next.js
+- `eslint-config-prettier`: Tích hợp với Prettier
+- `eslint-plugin-import`: Kiểm tra import/export
+- `eslint-plugin-playwright`: Hỗ trợ Playwright
+- `eslint-plugin-prettier`: Kiểm tra định dạng với Prettier
+- `eslint-plugin-simple-import-sort`: Tự động sắp xếp import
+- `eslint-plugin-unicorn`: Tăng cường best practices
+
+Chạy ESLint:
+
+```sh
+npm run lint
+npm run lint:fix # Fix lỗi tự động
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+### 2. Prettier
 
-You can start editing the page by modifying `app/page.tsx`. The page
-auto-updates as you edit the file.
+Prettier được sử dụng để định dạng code thống nhất, hỗ trợ TailwindCSS:
 
-This project uses
-[`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
-to automatically optimize and load [Geist](https://vercel.com/font), a new font
-family for Vercel.
+```sh
+npm run format
+```
 
-## Learn More
+### 3. Commitizen & Commitlint
 
-To learn more about Next.js, take a look at the following resources:
+Chuẩn hóa commit message theo Conventional Commits:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `commitizen` giúp tạo commit message dễ dàng
+- `commitlint` kiểm tra format commit
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js) - your
-feedback and contributions are welcome!
+Cách sử dụng:
 
-## Deploy on Vercel
+```sh
+npx git-cz
+```
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+### 4. Husky
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-for more details.
+Husky giúp tự động chạy kiểm tra trước khi commit:
+
+- Chạy ESLint trước khi commit
+- Kiểm tra format commit
+
+Cài đặt Husky:
+
+```sh
+npm run prepare
+```
+
+## Công nghệ sử dụng
+
+- **Next.js 15**: Framework React mạnh mẽ
+- **React 19**: Phiên bản mới nhất
+- **TypeScript**: Kiểm tra kiểu tĩnh
+- **TailwindCSS**: Styling nhanh chóng
+- **ESLint & Prettier**: Định dạng và kiểm tra code
+
+## License
+
+MIT
+
