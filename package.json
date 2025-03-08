@@ -1,6 +1,10 @@
 {
-  "name": "app-clone",
+  "name": "base-nextjs-15",
   "version": "0.1.0",
+  "author": {
+    "name": "ManfredDev",
+    "email": "binhphan.dev@gmail.com"
+  },
   "private": true,
   "config": {
     "commitizen": {
